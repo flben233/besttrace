@@ -180,7 +180,7 @@ main() {
 
   for key in "${keys_order[@]}"; do
     echo -e "$(get_address_value $key)"
-    "${WORK_DIR}besttrace" -g ${BESTTRACE_LANG} -q ${BESTTRACE_QUERIES} ${ip_address["$key"]}
+    "${WORK_DIR}besttrace -T" -g ${BESTTRACE_LANG} -q ${BESTTRACE_QUERIES} ${ip_address["$key"]}
     next
   done
 
